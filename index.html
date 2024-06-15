@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <!--
+
+This file is part of gbfs-web <https://mattiebee.dev/gbfs-web>.
+
+Copyright 2024 Mattie Behrens.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+“Software”), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject
+to the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
+  <head>
+    <title>gbfs-web</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <script src="gbfs-web.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="https://mattiebee.app/gbfs-web">Home</a>
+        <a href="https://mattiebee.dev/gbfs-web">Source</a>
+      </nav>
+      <h1>gbfs-web</h1>
+      <p>
+        A Web-based tool to pack files onto a ROM using
+        <a href="https://pineight.com/gba/#gbfs">GBFS</a>.
+      </p>
+    </header>
+    <p>
+      gbfs-web was developed for and tested with
+      <a href="https://mattiebee.dev/4-e">4-e</a>, a Game Boy Advance homebrew
+      application that can emulate an e-Reader for Super Mario Advance 4.
+    </p>
+
+    <p>
+      By following the simple steps below, you can take any ROM that supports
+      GBFS, select files to attach, and save a new ROM with those files
+      attached.
+    </p>
+
+    <p>
+      Everything is done locally in your browser. No ROM or file data is sent to
+      or received from any server.
+    </p>
+
+    <h2>&#x2460; Pick a ROM</h2>
+    <input id="rom" type="file" />
+
+    <h2>&#x2461; Pick files to attach</h2>
+    <input id="objects" type="file" multiple />
+
+    <h2>&#x2462; Save the new ROM</h2>
+    <button id="save">Save</button>
+
+    <footer>
+      <p>Version 1.0.</p>
+      <p>
+        gbfs-web was created by Mattie Behrens and is available under the
+        <a href="https://opensource.org/license/MIT">MIT license</a>.
+      </p>
+      <p>
+        gbfs-web uses <a href="https://simplecss.org">Simple.css</a> by
+        <a href="https://kevquirk.com">Kev Quirk</a>.
+      </p>
+    </footer>
+  </body>
+</html>
