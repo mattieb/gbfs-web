@@ -35,31 +35,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <header>
       <nav>
         <a href="https://mattiebee.app/gbfs-web">Home</a>
+        <a href="#about">About this app</a>
         <a href="https://mattiebee.dev/gbfs-web">Source</a>
       </nav>
       <h1>gbfs-web</h1>
       <p>
-        A Web-based tool to pack files onto a ROM using
+        Attach files to a ROM using
         <a href="https://pineight.com/gba/#gbfs">GBFS</a>.
       </p>
     </header>
-    <p>
-      gbfs-web was developed for and tested with
-      <a href="https://mattiebee.dev/4-e">4-e</a>, a Game Boy Advance homebrew
-      application that can emulate an e-Reader for Super Mario Advance 4.
-    </p>
-
-    <p>
-      By following the simple steps below, you can take any ROM that supports
-      GBFS, select files to attach, and save a new ROM with those files
-      attached.
-    </p>
-
-    <p>
-      Everything is done locally in your browser. No ROM or file data is sent to
-      or received from any server.
-    </p>
-
     <h2>&#x2460; Pick a ROM</h2>
     <input id="rom" type="file" />
 
@@ -69,15 +53,41 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <h2>&#x2462; Save the new ROM</h2>
     <button id="save">Save</button>
 
-    <footer>
-      <p>Version 1.0.</p>
+    <section id="about">
+      <h2 id="about">About this app</h2>
+
       <p>
-        gbfs-web was created by
-        <a href="https://mattiebee.io">Mattie Behrens</a> and is available under
-        the <a href="https://opensource.org/license/MIT">MIT license</a>.
+        By following the three simple steps in this app, you can take any ROM
+        that supports <a href="https://pineight.com/gba/#gbfs">GBFS</a> (such as
+        <a href="https://mattiebee.dev/4-e">4-e</a>), select files to attach,
+        and save a new ROM with those files attached.
       </p>
+
       <p>
-        gbfs-web uses <a href="https://simplecss.org">Simple.css</a> by
+        Everything is done in your browser. No ROM or file data is sent to or
+        received from any server.
+      </p>
+
+      <p>
+        This app differs slightly from the command-line GBFS tools in a few
+        ways. It currently only creates a single GBFS "file" that it attaches to
+        the ROM, unlike those tools, which can create many. It also does not pad
+        objects in the GBFS file, unlike those tools; this did not appear
+        necessary. If you have problems, please consider
+        <a href="https://github.com/mattieb/gbfs-web/issues">filing an issue</a
+        >.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Version 1.1. gbfs-web was developed for and tested with
+        <a href="https://mattiebee.dev/4-e">4-e</a>, a Game Boy Advance homebrew
+        application that can emulate an e-Reader for Super Mario Advance 4. It
+        was created by <a href="https://mattiebee.io">Mattie Behrens</a> and is
+        available under the
+        <a href="https://opensource.org/license/MIT">MIT license</a>, and uses
+        <a href="https://simplecss.org">Simple.css</a> by
         <a href="https://kevquirk.com">Kev Quirk</a>.
       </p>
     </footer>
