@@ -76,15 +76,12 @@ async function calculateStructure(files) {
     size: DIRECTORY_ENTRY_SIZE * files.length,
   };
 
-  let totalSize = directory.offset + directory.size;
   const objectPromises = [...files].map(async (file) => {
     const object = {
       buffer: await file.arrayBuffer(),
       name: file.name,
-      offset: totalSize,
       size: file.size,
     };
-    totalSize += object.size;
     return object;
   });
   const objects = await Promise.all(objectPromises);
@@ -92,6 +89,12 @@ async function calculateStructure(files) {
     a.name < b.name ? -1 :
     a.name > b.name ? 1 :
     0);
+
+  let totalSize = directory.offset + directory.size;
+  for (const object of objects) {
+    object.offset = totalSize;
+    totalSize += object.size;
+  }
 
   return { directory, objects, totalSize };
 }
